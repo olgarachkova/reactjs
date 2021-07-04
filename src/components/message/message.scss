@@ -1,0 +1,13 @@
+.message {
+    background-color: aqua;
+    margin-top: 3px;
+    width: percentage($number: 1/5);
+
+    &-owner {
+        align-self: flex-end;
+    }
+
+    &-companion {
+        align-self: flex-start;
+    }
+}
