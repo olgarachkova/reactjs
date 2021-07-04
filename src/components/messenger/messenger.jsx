@@ -1,6 +1,8 @@
+import './messenger.scss'
+
 import React, { Component } from "react";
-import { MessagesList } from "./messagesList";
-import { MessageForm } from "./messageForm";
+import { MessagesList } from "components/messagesList";
+import { MessageForm } from "components/messageForm";
 
 
 export class Messenger extends Component {
@@ -20,7 +22,7 @@ export class Messenger extends Component {
                     messages: this.state.messages.concat([{ text: `hi, ${this.state.messages[this.state.messages.length - 1].author}!`, author: 'bot' }]),
                 });
             }
-        }, 1000);
+        }, 5000);
     }
 
     componentWillUnmount() {
@@ -28,16 +30,15 @@ export class Messenger extends Component {
     }
 
     handleMessageSend = (message) => {
-        console.log(message);
         this.setState({
-            messages: this.state.messages.concat([{ text: message.text, author: message.author }]),
+            messages: this.state.messages.concat([message]),
         });
     }
 
     render() {
         const { messages } = this.state;
         return (
-            <div>
+            <div className='messenger'>
                 <MessagesList messages={messages} />
                 <MessageForm onSend={this.handleMessageSend} />
             </div>

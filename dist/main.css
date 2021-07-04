@@ -1,0 +1,42 @@
+.layout {
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 40px auto;
+  grid-template-areas: "header header" "chatlist messenger"; }
+
+.header {
+  background-color: #d5e7ff;
+  color: #4c90e6;
+  font-size: 25px;
+  text-align: center;
+  grid-area: header; }
+
+.chat-list {
+  grid-area: chatlist; }
+
+.messenger {
+  display: flex;
+  flex-direction: column;
+  grid-area: messenger; }
+
+.messages-list {
+  background-color: #4c90e6;
+  display: flex;
+  flex-direction: column; }
+
+.message {
+  background-color: #F4F4F5;
+  margin: 5px;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 20px; }
+  .message-owner {
+    align-self: flex-end; }
+  .message-companion {
+    align-self: flex-start; }
+  .message-sender {
+    color: gray;
+    font-size: 14px; }
+
