@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
-import { Messenger } from './components/messenger';
+import { Layout } from './components/layout';
 
 
 ReactDom.render(
-    <Messenger />,
+
+    <Layout />,
     document.getElementById('root')
 );

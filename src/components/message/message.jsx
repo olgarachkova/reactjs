@@ -22,7 +22,7 @@ export class Message extends Component {
             'message-companion': author === 'bot'
         })
         return (
-            <div className={classes}>{author}: {text}</div>
+            <div className={classes}>{text} <div className='message-sender'>{author}</div></div>
         )
     }
 

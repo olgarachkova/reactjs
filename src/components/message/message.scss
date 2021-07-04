@@ -1,7 +1,9 @@
 .message {
-    background-color: aqua;
-    margin-top: 3px;
-    width: percentage($number: 1/5);
+    background-color: #F4F4F5;
+    margin: 5px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 20px;
 
     &-owner {
         align-self: flex-end;
@@ -9,5 +11,9 @@
 
     &-companion {
         align-self: flex-start;
+    }
+    &-sender {
+        color: gray;
+        font-size: 14px;
     }
 }
