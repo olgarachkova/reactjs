@@ -43,7 +43,7 @@ export class MessageForm extends Component {
             <div>
                 <TextField name="author" id="standard-basic" label="author" onChange={this.handleInputChange} value={author} />
                 <TextField name="text" id="standard-basic" label="text" onChange={this.handleInputChange} value={text} onKeyDown={this.handleEnterDown} />
-                <Fab variant="contained" color="primary" onClick={this.handleMessageSend}><SendIcon /></Fab>
+                <Fab variant="round" color="primary" onClick={this.handleMessageSend}><SendIcon /></Fab>
             </div>
         )
 
