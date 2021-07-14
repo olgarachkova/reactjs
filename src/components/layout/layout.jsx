@@ -10,11 +10,12 @@ export class Layout extends Component {
 
 
     render() {
+        //const { match } = this.props;
         return (
             <div className='layout'>
                 <Header />
                 <ChatList />
-                <Messenger />
+                <Messenger {...this.props} />
             </div>
         )
     }
