@@ -1,6 +1,7 @@
 import './chatList.scss';
 
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 
 import { List } from '@material-ui/core';
 import { ListItem } from '@material-ui/core';
@@ -8,20 +9,16 @@ import { ListItemText } from '@material-ui/core';
 
 export class ChatList extends Component {
     render() {
+        const { chats } = this.props;
         return (
-            <div className='chat-list'>
-                <List>
-                    <ListItem button>
-                        <ListItemText primary="Chat 1" />
+            <List className='chat-list'>
+                {chats.map((chat, idx) => <Link key={idx} to={chat.link}>
+                    <ListItem>
+                        <ListItemText primary={chat.name} />
                     </ListItem>
-                    <ListItem button>
-                        <ListItemText primary="Chat 2" />
-                    </ListItem>
-                    <ListItem button>
-                        <ListItemText primary="Chat 3" />
-                    </ListItem>
-                </List>
-            </div>
+                </Link>)}
+            </List>
+
         )
     }
 }

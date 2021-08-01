@@ -1,11 +1,11 @@
-import { Layout } from './components/layout';
-import { AboutPage } from './pages/AboutPage';
+import { LayoutRedux } from 'containers/LayoutContainer';
+import { AboutPage } from 'pages/AboutPage';
 
 export const myroutes = [
     {
         path: '/',
         exact: true,
-        component: Layout,
+        component: LayoutRedux,
     },
     {
         path: '/about',
@@ -15,6 +15,6 @@ export const myroutes = [
     {
         path: '/chats/:id',
         exact: true,
-        component: Layout,
+        component: LayoutRedux,
     }
 ]
