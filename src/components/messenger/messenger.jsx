@@ -9,7 +9,7 @@ import { MessageForm } from "components/messageForm";
 
 
 export class Messenger extends Component {
-    state = {
+    /*state = {
         chats: {
             '1': {
                 id: 1,
@@ -55,8 +55,7 @@ export class Messenger extends Component {
     }
 
     handleMessageSend = (message) => {
-        const { chats } = this.state;
-        const { match } = this.props;
+        const { match, chats } = this.props;
 
         const chat = chats[match.params.id];
         const messages = this.messages.concat([message]);
@@ -68,26 +67,15 @@ export class Messenger extends Component {
                 [match.params.id]: chat,
             }
         });
-    }
+    }*/
 
-    get messages() {
-        const { chats } = this.state;
-        const { match } = this.props;
-
-        let messages = null;
-
-        if (match && chats[match.params.id]) {
-            messages = chats[match.params.id].messages;
-        }
-
-        return messages;
-    }
 
     render() {
+        const { messages, sendMessage } = this.props;
         return (
             <div className='messenger'>
-                {this.messages ? <MessagesList messages={this.messages} /> : 'выберите чат'}
-                {this.messages && <MessageForm onSend={this.handleMessageSend} />}
+                {messages ? <MessagesList messages={messages} /> : 'выберите чат'}
+                {messages && <MessageForm onSend={sendMessage} />}
             </div>
         )
     }

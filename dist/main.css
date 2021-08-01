@@ -40,3 +40,16 @@
     color: gray;
     font-size: 14px; }
 
+.messenger {
+  display: flex;
+  flex-direction: column;
+  grid-area: messenger; }
+
+.layout {
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 40px auto;
+  grid-template-areas: "header header" "chatlist messenger"; }
+
